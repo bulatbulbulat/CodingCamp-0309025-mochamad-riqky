@@ -1,0 +1,147 @@
+/* Reset Dasar & Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* NFR-3: Typography [cite: 52] */
+}
+
+/* Tantangan: Dark Mode Styling */
+:root {
+    --bg-color: #6a5acd;
+    --card-bg: white;
+    --text-color: #333;
+}
+
+body.dark-theme {
+    --bg-color: #2c2c2c;
+    --card-bg: #3d3d3d;
+    --text-color: #f0f0f0;
+}
+
+body {
+    background-color: var(--bg-color); /* Update ini */
+}
+
+.card {
+    background: var(--card-bg); /* Update ini */
+    color: var(--text-color); /* Update ini */
+}
+
+body {
+    background-color: #6a5acd; /* Warna dasar ungu sesuai gambar contoh [cite: 90] */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* Kartu Utama (Visual Design NFR-3) [cite: 50, 51] */
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Header/Greeting Section */
+.greeting-card h1 {
+    font-size: 3rem;
+    color: #6a5acd;
+}
+
+.greeting-card p {
+    color: #777;
+    margin-bottom: 5px;
+}
+
+/* Grid Layout untuk Dashboard [cite: 24] */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Membagi dua kolom sesuai gambar [cite: 90] */
+    gap: 20px;
+}
+
+/* Focus Timer Styling [cite: 58] */
+.timer-display {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #6a5acd;
+    margin: 15px 0;
+}
+
+.timer-controls button, .input-group button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #e0e0e0;
+    transition: 0.3s;
+}
+
+.timer-controls button#start-btn {
+    background-color: #7b68ee;
+    color: white;
+}
+
+/* To-Do List & Quick Links Styling [cite: 63, 66] */
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+ul {
+    list-style: none;
+    text-align: left;
+}
+
+li {
+    background: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Quick Links Grid [cite: 69] */
+.links-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.link-btn {
+    background: #7b68ee;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* Responsivitas (NFR-2) [cite: 47] */
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
